@@ -1,13 +1,13 @@
 <?php
-define('DB_HOST', '127.0.0.1');
-define('DB_PORT', '3306');
-define('DB_NAME', 'smartdelivery');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
+define('DB_PORT', getenv('DB_PORT') ?: '3306');
+define('DB_NAME', getenv('DB_NAME') ?: 'smartdelivery');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 
-define('WHATSAPP_NUMERO', '5500000000000');
-define('NOME_LOJA', 'SmartDelivery');
-define('HORARIO_FUNCIONAMENTO', 'Seg-Dom: 18h - 23h');
+define('WHATSAPP_NUMERO', getenv('WHATSAPP_NUMERO') ?: '5500000000000');
+define('NOME_LOJA', getenv('NOME_LOJA') ?: 'SmartDelivery');
+define('HORARIO_FUNCIONAMENTO', getenv('HORARIO_FUNCIONAMENTO') ?: 'Seg-Dom: 18h - 23h');
 
 function conexao() {
     try {

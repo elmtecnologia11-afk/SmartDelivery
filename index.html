@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDelivery - Pizzaria</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo-area">
+        <img src="images/logo.png" alt="SmartDelivery" class="logo-img" onerror="this.style.display='none'">
+        <div>
+          <h1 class="nome-loja">SmartDelivery</h1>
+          <span class="tagline">A melhor pizza da cidade</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="horario">&#128336; Seg-Dom: 18h - 23h</span>
+        <button class="carrinho-btn" id="carrinhoBtn">
+          &#128722; <span class="carrinho-count" id="carrinhoCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <h2>Faça seu pedido agora!</h2>
+      <p>Entrega gratuita acima de R$ 50,00</p>
+    </div>
+  </section>
+
+  <main class="container main-content">
+    <nav class="categorias" id="categorias">
+      <button class="cat-btn active" data-categoria="todos">Todos</button>
+      <button class="cat-btn" data-categoria="tradicionais">Tradicionais</button>
+      <button class="cat-btn" data-categoria="especiais">Especiais</button>
+      <button class="cat-btn" data-categoria="doces">Doces</button>
+      <button class="cat-btn" data-categoria="bebidas">Bebidas</button>
+    </nav>
+
+    <div class="produtos" id="produtos"></div>
+  </main>
+
+  <div class="carrinho-panel" id="carrinhoPanel">
+    <div class="carrinho-header">
+      <h3>Seu Pedido</h3>
+      <button class="fechar-carrinho" id="fecharCarrinho">&times;</button>
+    </div>
+    <div class="carrinho-items" id="carrinhoItems">
+      <p class="carrinho-vazio">Seu carrinho está vazio</p>
+    </div>
+    <div class="carrinho-footer" id="carrinhoFooter" style="display:none;">
+      <div class="total">
+        <span>Total:</span>
+        <span id="totalPreco">R$ 0,00</span>
+      </div>
+      <div class="observacao">
+        <textarea id="observacaoPedido" placeholder="Observações (ex: sem cebola, borda recheada...)"></textarea>
+      </div>
+      <button class="btn-finalizar" id="finalizarPedido">Finalizar Pedido via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SmartDelivery. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
